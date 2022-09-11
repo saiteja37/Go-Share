@@ -7,8 +7,10 @@ const Profile = () => {
     const [modal,setModal]=useState(false)
     const  ans=tok.slice(1)
   const token=ans.slice(0,ans.length-1)
+  console.log(token)
   const [data,setData]=useState()
     useEffect(()=>{
+    
         axios.get("http://localhost:1000/profile",{
             headers:{
                 "x-token":token

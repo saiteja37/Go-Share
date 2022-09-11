@@ -16,7 +16,7 @@ const Book = () => {
     const  ans=tok.slice(1)
   const token=ans.slice(0,ans.length-1)
   const[list,setList]=useState([])
-    axios.get("profile",{
+    axios.get("http://localhost:1000/profile",{
         headers:{
             "x-token":token
         }
@@ -101,7 +101,7 @@ const Book = () => {
         "from":userCredObj.from,
         "to":userCredObj.to
       }
-      axios.post("/cbook",data,{
+      axios.post("http://localhost:1000/cbook",data,{
         headers:{
           'x-token':token
         }

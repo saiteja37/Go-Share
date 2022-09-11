@@ -32,7 +32,7 @@ function Navba() {
                             <a className='mx-3'    as={NavLink} href="/book">Book A Ride</a>
                             <a className='mx-3'    as={NavLink} href="/post">Post A ride</a>
                             <a className='mx-3'    as={NavLink} href="/myrides">My Rides</a>
-                            <a className='mx-3'     as={NavLink} href="/profile" >Profile </a>
+                            <a className='mx-3'     as={NavLink} href="/profil" >Profile </a>
                             
                         
                             

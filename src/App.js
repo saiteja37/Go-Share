@@ -28,10 +28,10 @@ const App = () => {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/book" element={<Book></Book>}></Route>
         <Route path="/post" element={<Post></Post>}></Route>
-        <Route path="/profile" element={<Profile></Profile>}></Route>
+        <Route path="/profil" element={<Profile></Profile>}></Route>
         <Route path="/myrides" element={<Myrides></Myrides>}></Route>
-        <Route path="/booked" element={<Booked></Booked>}></Route>
-        <Route path="/posted" element={<Posted></Posted>}></Route>
+        <Route path="/clibooked" element={<Booked></Booked>}></Route>
+        <Route path="/cliposted" element={<Posted></Posted>}></Route>
       </Routes>
     </Router>
   )

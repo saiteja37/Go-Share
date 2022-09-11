@@ -76,11 +76,11 @@ app.post("/creg",async(req,res)=>{
        await  use.save();
         alert("user registered")
     }
-    /*twilio.messages.create({
+    twilio.messages.create({
         body:"Account registered",
         to:phno,
         from:"+15138485928"
-    })*/
+    })
 })
 app.post("/clogin",async(req,res)=>{
     const {email,pass}=req.body;
@@ -165,22 +165,22 @@ app.get("/sbooked",middelware,async(req,res)=>{
     let exis=await booked.find({bookedby:req.user.id}).populate("person")
     let exist=await booked.find({"person._id":req.user.id})
     let exi=await Customer.findById(req.user.id);
-    /*twilio.messages.create({
+    twilio.messages.create({
         body:"U have booked ride succesfully",
         to:exi.phno,
         from:"+15138485928"
-    })*/
+    })
     return res.json(exis)
 })
 app.get("/sposted",middelware,async(req,res)=>{
     let exis=await booked.find({person:req.user.id}).populate("bookedby")
     let exist=await booked.find({"person._id":req.user.id})
     let exi=await Customer.findById(req.user.id);
-    /*twilio.messages.create({
+    twilio.messages.create({
         body:"Ur ride request was accepted succesfully",
         to:exi.phno,
         from:"+15138485928"
-    })*/
+    })
     return res.json(exis)
 })
 
