@@ -1,0 +1,9 @@
+.book{
+
+    height: 80vh;
+    width: 40vw;
+    display: grid;
+    place-items: center;
+    display:center;
+    padding-right: 20px;
+}

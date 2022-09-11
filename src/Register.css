@@ -1,0 +1,15 @@
+.register{
+    display: grid;
+    place-items: end;
+    padding-right: 20px;
+    height: 70vh;
+    width: 100vw;
+    padding-top: 40px;
+    padding-bottom: 40px;
+   
+}
+.body{
+    background-image: url("https://img.freepik.com/free-vector/car-driving-concept-illustration_114360-8001.jpg?w=1060&t=st=1662870709~exp=1662871309~hmac=eb03dc8591cb7cdc7baa2558f3f2055fd7225a66fbf6e55e4f38187faa6d61a5");
+    height: 120vh;
+    display: block;
+}
