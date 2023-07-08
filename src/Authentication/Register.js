@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Row, Col, Button, Form } from 'react-bootstrap'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './Register.css'
+import './css/Register.css'
 
 const Register = () => {
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ const Register = () => {
             pass: userCredObj.password,
         };
         console.log(data)
-        axios.post("http://localhost:1000/creg", data).then((res) => {
+        axios.post("http://localhost:2000/creg", data).then((res) => {
         });
         navigate("/login")
     };

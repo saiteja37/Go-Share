@@ -1,5 +1,5 @@
 import React from 'react'
-import Register from './Register'
+import Register from './Authentication/Register'
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,23 +8,22 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
-import Login from './Login';
+import Login from './Authentication/Login';
 import Navba from './Navbar';
-import Home from './Home';
-import Book from './Book';
-import Profile from './Profile';
-import Post from './Post';
-import Myrides from './Myrides';
-
-import Booked from './Booked';
-import Posted from './Posted';
+import Home from './User Info/Home';
+import Profile from './User Info/Profile';
+import Myrides from './User Info/Myrides';
+import Booked from './Bookings/Booked';
+import Book from './Bookings/Book';
+import Posted from './Postings/Posted';
+import Post from './Postings/Post'
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path='/' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path="/nav" element={<Navba></Navba>}></Route>
+        <Route path="/nav" element={<Protected><Navba></Navba></Protected>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/book" element={<Book></Book>}></Route>
         <Route path="/post" element={<Post></Post>}></Route>

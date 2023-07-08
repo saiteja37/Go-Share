@@ -5,8 +5,8 @@ import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom';
 import {useState} from "react";
 import {Table} from 'antd'
-import './Login.css'
-import Navba from './Navbar';
+import '../Authentication/css/Login.css'
+import Navba from '../Navbar';
 import './Book.css'
 const Book = () => {
     const navigate = useNavigate();
@@ -16,7 +16,7 @@ const Book = () => {
     const  ans=tok.slice(1)
   const token=ans.slice(0,ans.length-1)
   const[list,setList]=useState([])
-    axios.get("http://localhost:1000/profile",{
+    axios.get("http://localhost:2000/profile",{
         headers:{
             "x-token":token
         }
@@ -34,7 +34,7 @@ const Book = () => {
         bookedby:dat
       }
       console.log(data)
-      axios.post("booked",data,{
+      axios.post("http://localhost:2000/booked",data,{
         headers:{
           'x-token':token
         }
@@ -44,7 +44,7 @@ const Book = () => {
       const da={
         id:record._id
       }
-      axios.post("del",da,{
+      axios.post("http://localhost:2000/del",da,{
         headers:{
           'x-token':token
         }
@@ -101,7 +101,7 @@ const Book = () => {
         "from":userCredObj.from,
         "to":userCredObj.to
       }
-      axios.post("http://localhost:1000/cbook",data,{
+      axios.post("http://localhost:2000/cbook",data,{
         headers:{
           'x-token':token
         }

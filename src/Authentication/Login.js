@@ -3,7 +3,7 @@ import axios from "axios"
 import { useForm } from 'react-hook-form';
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom';
-import './Login.css'
+import './css/Login.css'
 
 const Login = () => {
     const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Login = () => {
             email: userCredObj.email,
             pass: userCredObj.password
         }
-        axios.post("http://localhost:1000/clogin", data).then((res) => {
+        axios.post("http://localhost:2000/clogin", data).then((res) => {
             localStorage.setItem('pos-user', JSON.stringify(res.data));
             navigate("/home")
         })

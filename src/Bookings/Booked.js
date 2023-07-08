@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Navba from './Navbar'
+import Navba from '../Navbar'
 import { Table } from 'antd'
 const Booked = () => {
     const [list,setList]=useState([])
@@ -8,7 +8,7 @@ const Booked = () => {
     const [modal,setModal]=useState(false)
     const  ans=tok.slice(1)
   const token=ans.slice(0,ans.length-1)
-    axios.get("http://localhost:1000/sbooked",{
+    axios.get("http://localhost:2000/sbooked",{
         headers:{
           'x-token':token
         }

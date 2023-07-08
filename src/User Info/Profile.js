@@ -1,23 +1,24 @@
 import axios from 'axios'
 import React from 'react'
-import Navba from './Navbar'
+import Navba from '../Navbar'
 import { useEffect,useState } from 'react'
 const Profile = () => {
     const tok=localStorage.getItem("pos-user");
     const [modal,setModal]=useState(false)
     const  ans=tok.slice(1)
   const token=ans.slice(0,ans.length-1)
-  console.log(token)
   const [data,setData]=useState()
     useEffect(()=>{
     
-        axios.get("http://localhost:1000/profile",{
+        axios.get("http://localhost:2000/profile",{
             headers:{
                 "x-token":token
             }
         }).then((res)=>{
            setModal(true)
            setData(res.data)
+           console.log(res.data.name)
+           console.log("hi")
         })
     },[])
   return (
@@ -41,3 +42,4 @@ const Profile = () => {
 }
 
 export default Profile
+

@@ -4,19 +4,20 @@ import { useForm } from 'react-hook-form';
 import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import './Login.css'
-import Navba from './Navbar';
-import './Book.css'
+import '../Authentication/css/Login.css'
+import Navba from '../Navbar';
+import '../Bookings/Book.css'
 const Post = () => {
     const navigate = useNavigate();
     const [veh,setVeh]=useState();
     const tok=localStorage.getItem("pos-user");
 
-    const [modal,setModal]=useState(false)
+    
     const  ans=tok.slice(1)
   const token=ans.slice(0,ans.length-1)
   const [dat,setDat]=useState()
-   axios.get("http://localhost:1000/profile",{
+  const [modal,setModal]=useState(false)
+   axios.get("http://localhost:2000/profile",{
     headers:{
         "x-token":token
     }
@@ -35,7 +36,7 @@ const Post = () => {
             person:dat._id
         }
         console.log(data)
-        axios.post("http://localhost:1000/cpost", data).then((res) => {
+        axios.post("http://localhost:2000/cpost", data).then((res) => {
           
         })
         

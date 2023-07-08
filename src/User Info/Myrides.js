@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar } from 'react-bootstrap'
-import Navba from './Navbar'
+import Navba from '../Navbar'
 
 const Myrides = () => {
   return (

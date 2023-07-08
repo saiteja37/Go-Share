@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Register from './Register';
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import 'antd/dist/antd.css'
 
